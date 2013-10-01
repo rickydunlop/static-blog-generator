@@ -1,8 +1,9 @@
 <html>
     <head>
         {% block head %}
-        <title>Blog</title>
+        <title>Ricky Dunlop's blog</title>
         {% endblock head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/normalise.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/syntax.css') }}">
 
@@ -13,6 +14,27 @@
           type="application/atom+xml">
     </head>
     <body>
+        <nav>
+            <ul class="nav">
+                {% for endpoint, title in [
+                  ('index', 'Home'),
+                ] %}
+                  <li{% if endpoint == request.endpoint %} class="active"{% endif %}>
+                    <a href="{{ url_for(endpoint) }}">{{ title }}</a>
+                {% endfor %}
+              </ul>
+        </nav>
         {% block content %}{% endblock content %}
     </body>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-115744-9']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 </html>

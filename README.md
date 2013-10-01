@@ -1,6 +1,7 @@
 # Python static blog generator
 
 
+
 ## Installation
 This assumes that you have [virtualenv](http://www.virtualenv.org/en/latest/) and [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/) installed
 
@@ -9,6 +10,10 @@ This assumes that you have [virtualenv](http://www.virtualenv.org/en/latest/) an
 
     mkvirtualenv --no-site-packages $NEW_PROJECT_NAME
     pip install -r requirements.txt
+
+## Running the site locally
+
+    python generator.py
 
 
 ## Building the static site

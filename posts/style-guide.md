@@ -12,11 +12,21 @@ published: true
 
 This is a paragraph
 
-*Bold text*
+**Bold text**
+
 _emphasised text_
 
+### List
+*   Abacus
+    * answer
+*   Bubbles
+    1.  bunk
+    2.  bupkis
+        * BELITTLER
+    3. burper
+*   Cunning
 
-## Code sample
+### Code sample
 
     :::python
     from urlparse import urljoin
